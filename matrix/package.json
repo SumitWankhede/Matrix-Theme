@@ -4,7 +4,7 @@
     "description": "This is a theme to create visual effect like Hacker terminal!",
     "homepage": "https://github.com/SumitWankhede/Matrix-Theme",
     "version": "1.1.0",
-    "author": "Sumit Wankhede <sumit.wankhede@hotmail.com> (https://github.com/SumitWankhede/Matrix-Theme)",
+    "author": "Sumit Wankhede <sumit.wankhede@hotmail.com>",
     "license": "MIT",
     "theme": {
         "file": "theme.less",

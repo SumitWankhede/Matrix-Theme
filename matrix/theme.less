@@ -1,14 +1,14 @@
-@bgColor: #000;
-@fgColor: #0CDD24;
-@comment: #3CE34F;
-@tag: #0AC620;
+@backgroundColor: #0D0208;
+@foregroundColor: #008F11;
+@comment: #003B00   ;
+@tag: #00FF41;
 .CodeMirror {
     
     .CodeMirror-linenumber,
     .CodeMirror-scroll,
     .CodeMirror-gutters {
-        background-color: @bgColor;
-        color: @fgColor;
+        background-color: @backgroundColor;
+        color: @foregroundColor;
     }
     
     .CodeMirror-linenumber{
@@ -17,13 +17,13 @@
     
     .cm-matchingtag,
 	.CodeMirror-matchingtag{
-        border-bottom: 1px dotted @fgColor;
+        border-bottom: 1px dotted @foregroundColor;
         background-color: transparent;
     }
     
     .cm-matchingbracket,
     .CodeMirror-matchingbracket{
-        color: @fgColor !important;
+        color: @foregroundColor !important;
         box-shadow: 0px 0px 5px #000;
         background-color: transparent;
         border: 1px solid #bbb;
@@ -32,8 +32,8 @@
     
     .CodeMirror-cursor{		  
        Margin: -1PX;
-	   Border: 1PX Solid @fgColor !important;
-	   Background: @fgColor;
+	   Border: 1PX Solid @foregroundColor !important;
+	   Background: @foregroundColor;
 	   Width: Auto;
     }
     
@@ -67,11 +67,11 @@
     }
     
     .cm-atom {
-        color: @fgColor;
+        color: @foregroundColor;
     }
     
     .cm-meta{
-        color: @fgColor !important;
+        color: @foregroundColor !important;
     }
     
     .cm-builtin {
@@ -85,7 +85,7 @@
     
     .cm-m-css.cm-property {
 		color: #04B404;
-        border-bottom: 1px dotted @fgColor;
+        border-bottom: 1px dotted @foregroundColor;
     }
     
 	.cm-m-css.cm-qualifier,
@@ -129,7 +129,7 @@
 	.CodeMirror-searching.searching-last,
 	.CodeMirror-searching.searching-first {
 		border-radius: 1px;
-		background-color: @fgColor;
+		background-color: @foregroundColor;
 		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 	}
 
@@ -144,7 +144,7 @@
 {
      .CodeMirror-activeline-background {
         background: rgba(1,223,58,.3);
-        box-shadow: 0 0 10px @fgColor;        
+        box-shadow: 0 0 10px @foregroundColor;        
     }
     
     .CodeMirror-gutter-elt{
