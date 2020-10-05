@@ -1,196 +1,153 @@
-@background: #0D0208;
-@foreground: #ddd;
-
-/* Code Styling */
-
-.CodeMirror,
-.CodeMirror-scroll {
-    background-color: @background;
-    color: @foreground;
-}
-
-.CodeMirror-focused .CodeMirror-activeline-background {
-    background: #2f2f2f;
-}
-
-.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
-    box-shadow: inset 15px 0 0 0 #000;
-}
-
-.CodeMirror-focused .CodeMirror-activeline {
-    .CodeMirror-gutter-elt {
-        background: rgba(0, 0, 0, 0.2);
-        color: #fff;
-    }
-
-    .inline-widget .CodeMirror-gutter-elt {
-        color: #767676;
-    }
-}
-
-.cm-atom,
-.cm-string,
-.cm-string-2,
-.cm-hr {
-    color: #d89333;
-}
-
-.cm-number,
-.cm-attribute,
-.cm-plus {
-    color: #85a300;
-}
-
-.cm-def,
-.cm-property {
-    color: #003B00;
-}
-
-.cm-variable,
-.cm-variable-2,
-.cm-variable-3,
-.cm-operator,
-.cm-meta,
-.cm-bracket {
-    color: @foreground;
-}
-
-.cm-comment {
-    color: #767676;
-}
-
-.cm-minus {
-    color: #dc322f;
-}
-
-.cm-header {
-    color: #d85896;
-}
-
-.cm-link {
-    color: #003B00;
-    text-decoration: none;
-}
-
-.cm-rangeinfo {
-    color: #00FF41;
-}
-
-.cm-keyword,
-.cm-qualifier,
-.cm-builtin,
-.cm-tag,
-.cm-quote {
-    color: #008F11;
-}
-
-.cm-error {
-    color: #dc322f;
-}
-
-/* Extra CSS */
-
-.CodeMirror-searching {
-    background-color: #d3cd69;
-
-    &.searching-current-match {
-        background-color: #f6a644;
-    }
-}
-
-
-.CodeMirror-cursor {
-    border-left: 1px solid #c5c8c6 !important;
-}
-
-.CodeMirror-gutters {
-    background-color: @background;
-    border-right: none;
-}
-
-.CodeMirror-linenumber {
-    color: #767676;
-}
-
-.CodeMirror .CodeMirror-selected {
-    background: #003B00;
-}
-
-.CodeMirror-focused .CodeMirror-selected {
-    background: #003B00;
-}
-
-.CodeMirror-matchingbracket,
-.CodeMirror-matchingtag {
-    /* Ensure visibility against gray inline editor background */
-    background-color: #2e5c00;
-    color: @foreground  !important;
-}
-
-.CodeMirror-overwrite .CodeMirror-cursor {
-    border-left: none !important;
-    border-bottom: 1px solid #fff;
-}
-
+@bgColor: #000;
+@fgColor: #0CDD24;
+@comment: #3CE34F;
+@tag: #0AC620;
 .CodeMirror {
-    .CodeMirror {
+    
+    .CodeMirror-linenumber,
+    .CodeMirror-scroll,
+    .CodeMirror-gutters {
+        background-color: @bgColor;
+        color: @fgColor;
+    }
+    
+    .CodeMirror-linenumber{
+        color: #04B404;
+    }
+    
+    .cm-matchingtag,
+	.CodeMirror-matchingtag{
+        border-bottom: 1px dotted @fgColor;
+        background-color: transparent;
+    }
+    
+    .cm-matchingbracket,
+    .CodeMirror-matchingbracket{
+        color: @fgColor !important;
+        box-shadow: 0px 0px 5px #000;
+        background-color: transparent;
+        border: 1px solid #bbb;
+        border-radius: 3px;
+    }
+    
+    .CodeMirror-cursor{		  
+       Margin: -1PX;
+	   Border: 1PX Solid @fgColor !important;
+	   Background: @fgColor;
+	   Width: Auto;
+    }
+    
+    .cm-comment{
+        color: #0B6121;
+        font-style: italic;
+    }
+    
+    .cm-bracket, .cm-variable, .cm-attribute, .cm-operator{
+        color: @tag !important;
+    }
+    
+    .cm-string, .cm-string-2, .cm-hr {
+        color: #01DF01;
+    }
+    
+    .cm-variable-2{
+        color: #3ADF00;
+    }
+    .cm-error {
+        color: #FF0000;
+}
+    .CodeMirror-selected {
+        padding-left: 1px;
+        padding-right: 1px;
+	background-color: #ffffff;
+	}
+    
+    .cm-keyword, .cm-def, .cm-number{
+        color: @tag;
+    }
+    
+    .cm-atom {
+        color: @fgColor;
+    }
+    
+    .cm-meta{
+        color: @fgColor !important;
+    }
+    
+    .cm-builtin {
+		color: #BFFF00;
+	}
+    
+    //style
+    .cm-m-css.cm-tag {
+        color: #38610B;
+    }
+    
+    .cm-m-css.cm-property {
+		color: #04B404;
+        border-bottom: 1px dotted @fgColor;
+    }
+    
+	.cm-m-css.cm-qualifier,
+	.cm-m-css.cm-variable-3 {
+        color: #9FF781;
+    }
+    
+    //html-xml
+    .cm-m-xml.cm-variable-2{
+        color: white;
+    }
+    
+    .cm-m-xml.cm-tag {
+		color: @tag;
+    } 
+    
+    //script
+    .cm-m-javascript.cm-operator {
+		color: #B4B4B4;
+	}
+
+	.cm-m-javascript.cm-variable,
+	.cm-m-javascript.cm-variable-3,
+	.cm-m-javascript.cm-property {
+		color: greenyellow;
+	}
+    
+    .cm-m-javascript.cm-def{
+        color: #FE2E2E;
+    }
+    
+    .cm-m-javascript.cm-variable-2{
+        color: #FE2E64;
+    }
+    
+    //search
+    .CodeMirror-searching{
+		color: #000 !important;
+	}
+
+	.CodeMirror-searching.searching-last,
+	.CodeMirror-searching.searching-first {
+		border-radius: 1px;
+		background-color: @fgColor;
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+	}
+
+	.CodeMirror-searching.searching-current-match {
+		background-color: darkgreen;
+        box-shadow: 0 0 10px #FE2E2E;
+	}
+}
+
+//Code For Highlight Active Line
+.CodeMirror
+{
+     .CodeMirror-activeline-background {
+        background: rgba(1,223,58,.3);
+        box-shadow: 0 0 10px @fgColor;        
+    }
+    
+    .CodeMirror-gutter-elt{
         background: transparent;
     }
-
-    .CodeMirror .CodeMirror-gutters {
-        background: transparent;
-        border-right: none;
-    }
-
-    .CodeMirror .CodeMirror-activeline-background {
-        background: transparent;
-    }
-
-    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
-        background: transparent;
-        color: #767676;
-    }
-
-    .CodeMirror-focused .CodeMirror-activeline-background {
-        background: #2f2f2f;
-    }
-
-    .CodeMirror-focused .CodeMirror-activeline {
-        .CodeMirror-gutter-elt {
-            background: rgba(0, 0, 0, 0.2);
-            color: #fff;
-        }
-    }
-}
-
-.CodeMirror-foldgutter-open:after {
-    color: #666;
-}
-
-.CodeMirror-foldgutter-folded:after {
-    color: #aaa;
-}
-
-.CodeMirror.over-gutter,
-.CodeMirror-activeline {
-    .CodeMirror-foldgutter-open:after {
-        color: #888;
-    }
-}
-
-.CodeMirror-foldmarker {
-    border-color: #000;
-    color: #ccc;
-    background-color: #444;
-}
-
-/* Non-editor styling */
-
-.image-view,
-.not-editor {
-    background-color: @background;
-}
-
-.view-pane .image-view {
-    color: @foreground;
 }
