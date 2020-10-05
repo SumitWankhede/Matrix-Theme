@@ -1,10 +1,10 @@
-/* Define some variables used in multiple places */
-@background: #163758;
+@background: #0D0208;
 @foreground: #ddd;
 
 /* Code Styling */
 
-.CodeMirror, .CodeMirror-scroll {
+.CodeMirror,
+.CodeMirror-scroll {
     background-color: @background;
     color: @foreground;
 }
@@ -22,27 +22,77 @@
         background: rgba(0, 0, 0, 0.2);
         color: #fff;
     }
+
     .inline-widget .CodeMirror-gutter-elt {
         color: #767676;
     }
 }
 
-.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: #d89333;}
-.cm-number, .cm-attribute, .cm-plus {color: #85a300;}
-.cm-def, .cm-property {color: #003B00;}
-.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
-.cm-comment {color: #767676;}
-.cm-minus {color: #dc322f;}
-.cm-header {color: #d85896;}
-.cm-link {color: #003B00; text-decoration: none;}
-.cm-rangeinfo {color: #00FF41;}
-.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: #008F11;}
-.cm-error {color: #dc322f;}
+.cm-atom,
+.cm-string,
+.cm-string-2,
+.cm-hr {
+    color: #d89333;
+}
+
+.cm-number,
+.cm-attribute,
+.cm-plus {
+    color: #85a300;
+}
+
+.cm-def,
+.cm-property {
+    color: #003B00;
+}
+
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-operator,
+.cm-meta,
+.cm-bracket {
+    color: @foreground;
+}
+
+.cm-comment {
+    color: #767676;
+}
+
+.cm-minus {
+    color: #dc322f;
+}
+
+.cm-header {
+    color: #d85896;
+}
+
+.cm-link {
+    color: #003B00;
+    text-decoration: none;
+}
+
+.cm-rangeinfo {
+    color: #00FF41;
+}
+
+.cm-keyword,
+.cm-qualifier,
+.cm-builtin,
+.cm-tag,
+.cm-quote {
+    color: #008F11;
+}
+
+.cm-error {
+    color: #dc322f;
+}
 
 /* Extra CSS */
 
 .CodeMirror-searching {
     background-color: #d3cd69;
+
     &.searching-current-match {
         background-color: #f6a644;
     }
@@ -63,16 +113,18 @@
 }
 
 .CodeMirror .CodeMirror-selected {
-    background: #333f48;
-}
-.CodeMirror-focused .CodeMirror-selected {
-    background: #0050a0;
+    background: #003B00;
 }
 
-.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+.CodeMirror-focused .CodeMirror-selected {
+    background: #003B00;
+}
+
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
     /* Ensure visibility against gray inline editor background */
     background-color: #2e5c00;
-    color: @foreground !important;
+    color: @foreground  !important;
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
@@ -114,11 +166,13 @@
 .CodeMirror-foldgutter-open:after {
     color: #666;
 }
+
 .CodeMirror-foldgutter-folded:after {
     color: #aaa;
 }
 
-.CodeMirror.over-gutter, .CodeMirror-activeline {
+.CodeMirror.over-gutter,
+.CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
         color: #888;
     }
