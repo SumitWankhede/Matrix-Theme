@@ -1,0 +1,15 @@
+{
+    "name": "sumit.matrix-theme",
+    "title": "Matrix Theme",
+    "description": "This is a theme to create visual effect Movie style (Black screen and green text)!",
+    "homepage": "https://github.com/yourname/my-shiny-theme",
+    "version": "1.0.0",
+    "author": "Sumit Wankhede <sumit.wankhede@hotmail.com> (http://your.url)",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme"]
+}
